@@ -74,3 +74,58 @@ Replace ```<your-username>``` with your GitHub username.
 git branch -M main
 git push --set-upstream origin main
 ```
+
+## Part 2: Setting Up Dev Container
+
+1) In VS Code open your HelloWorldGo folder
+
+2) Install the **Dev Containers** extension for VS Code
+
+3) Create a ```.devcontainer``` directory in the root of your project and add a file into the folder called ```devcontainer.json```
+
+4) Inside the ```devcontainer.json``` file add the follwing code to setup our environment:
+
+```sh
+{
+  "name": "Hello World Go",
+  "image": "mcr.microsoft.com/devcontainers/go:latest",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": ["golang.Go"]
+    }
+  },
+}
+```
+
+5) Reopen the project in a container by pressing ++ctrl+shift+p++ or ++cmd+shift+p++
+
+## Part 3: Creating Go Project
+
+1) In the terminal, confirm Go is installed using ```go version```
+
+2) To create a Go Module use the command:
+
+```sh
+go mod init ./HelloWorld
+```
+
+3) In your HelloWorld folder create a file ```hello.go``` and paste the following code
+
+```sh
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+```
+
+4) In the terminal you can then run your code using:
+
+```sh
+go run .
+```
+
+You should see ``Hello, World!`` output to your console 
