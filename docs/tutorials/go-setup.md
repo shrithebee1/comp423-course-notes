@@ -98,7 +98,7 @@ git push --set-upstream origin main
 }
 ```
 
-5) Reopen the project in a container by pressing ++ctrl+shift+p++ or ++cmd+shift+p++
+5) Reopen the project in a container by pressing ++ctrl+shift+p++ or ++cmd+shift+p++ and then selecting **Dev Containers: Reopen in Container**
 
 ## Part 3: Creating Go Project
 
@@ -107,10 +107,10 @@ git push --set-upstream origin main
 2) To create a Go Module use the command:
 
 ```sh
-go mod init ./HelloWorld
+go mod init HelloWorld
 ```
 
-3) In your HelloWorld folder create a file ```hello.go``` and paste the following code
+3) Create a file ```hello.go``` and paste the following code
 
 ```sh
 package main
@@ -129,3 +129,17 @@ go run .
 ```
 
 You should see ``Hello, World!`` output to your console 
+
+5) Optionally you can first build an executable file using:
+
+```sh
+go build hello.go
+```
+
+6) Then you can run the executable in terminal using: ```./hello```
+
+
+
+
+<br>
+<br>
