@@ -98,9 +98,12 @@ git push --set-upstream origin main
 }
 ```
 
+???+ info "Extension"
+    The ```golang.Go``` extension was developed by Google engineers and provides extensive language support for the Go language in Visual Studio Code. It was released in 2015.
+
 5) Reopen the project in a container by pressing ++ctrl+shift+p++ or ++cmd+shift+p++ and then selecting **Dev Containers: Reopen in Container**
 
-## Part 3: Creating Go Project
+## Part 3: Creating the Go Project
 
 1) In the terminal, confirm Go is installed using ```go version```
 
@@ -110,9 +113,13 @@ git push --set-upstream origin main
 go mod init HelloWorld
 ```
 
+???+ note "Purpose of ```go mod```"
+    This command manages modules in Go projects which allows for the management of dependencies in Go projects. It also tracks version of dependencies used and ensures a consistent development environment. It is similar to a ```requirements.txt``` in Python.
+
+
 3) Create a file ```hello.go``` and paste the following code
 
-```sh
+```go
 package main
 
 import "fmt"
@@ -121,6 +128,11 @@ func main() {
     fmt.Println("Hello, World!")
 }
 ```
+
+???+ note "```main``` package and import statement"
+    The ```main``` package indicates that this file is the main file. It will be run by default when ```go run . ``` is run.
+    The ```"fmt"``` package provides functions for formatted input and output operations. It serves the same purpose as ```<stdio.h>``` in C.
+
 
 4) In the terminal you can then run your code using:
 
@@ -137,6 +149,9 @@ go build hello.go
 ```
 
 6) Then you can run the executable in terminal using: ```./hello```
+
+???+ warning
+    If you wish to preserve the binary of the built program, **do not** use ```go run .```, instead use the above two step process.
 
 
 
