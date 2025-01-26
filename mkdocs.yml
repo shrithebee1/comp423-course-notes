@@ -7,3 +7,5 @@ theme:
 markdown_extensions:
   - pymdownx.keys
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
