@@ -85,7 +85,12 @@ git push --set-upstream origin main
 
 4) Inside the ```devcontainer.json``` file add the follwing code to setup our environment:
 
-```sh
+
+  * **name**: This specifies a clear, descriptive label for your development container.
+  * **image**: Defines the Docker image used to create the container. For this setup, we'll use the latest Rust environment image provided by Microsoft.
+  * **customizations**: Allows you to configure additional features in VS Code, such as pre-installing useful extensions. Adding extensions here ensures other developers on your project have them installed in their dev containers automatically.
+
+```json
 {
   "name": "Hello World Go",
   "image": "mcr.microsoft.com/devcontainers/go:latest",
@@ -94,7 +99,7 @@ git push --set-upstream origin main
       "settings": {},
       "extensions": ["golang.Go"]
     }
-  },
+  }
 }
 ```
 
@@ -158,3 +163,6 @@ go build hello.go
 
 <br>
 <br>
+
+[^]:
+  Steps regarding git and dev container initialization were taken from the [COMP 423](https://comp423-25s.github.io/resources/MkDocs/tutorial/#step-1-create-a-local-directory-and-initialize-git) site.
