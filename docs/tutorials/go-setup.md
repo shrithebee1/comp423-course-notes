@@ -130,7 +130,7 @@ package main
 import "fmt"
 
 func main() {
-    fmt.Println("Hello, World!")
+    fmt.Println("Hello COMP423!")
 }
 ```
 
@@ -145,7 +145,7 @@ func main() {
 go run .
 ```
 
-You should see ``Hello, World!`` output to your console 
+You should see ``Hello COMP423!`` output to your console 
 
 5) Optionally you can first build an executable file using:
 
